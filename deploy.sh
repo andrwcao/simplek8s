@@ -11,6 +11,6 @@ docker push andrwcao/multi-worker:$SHA
 
 kubectl apply -f k8s
 
-kubectl set image deployments/client-deployment server=andrwcao/multi-client:$SHA
-kubectl set image deployments/server-deployment client=andrwcao/multi-server:$SHA
+kubectl set image deployments/client-deployment client=andrwcao/multi-client:$SHA
+kubectl set image deployments/server-deployment server=andrwcao/multi-server:$SHA
 kubectl set image deployments/worker-deployment worker=andrwcao/multi-worker:$SHA
